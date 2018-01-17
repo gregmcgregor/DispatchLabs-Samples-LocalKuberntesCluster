@@ -30,7 +30,7 @@ sudo mv ./kubectl /usr/local/bin/kubectl
 # ![](https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_directions_run_black_24px.svg) Run Local Cluster
  - `docker run -d -p 5000:5000 --restart=always --name registry registry:2`
  - `docker build -t sample-docker-image .`
- - `docker push localhost:5000/sample-docker-image`
+ - `docker push localhost:5000/sample-docker-image` (NOTE:  NOT NEEDED - OPTIONAL)
  - `docker images`
  - `minikube start`
  - `kubectl run sample-cluster --image=sample-docker-image --image-pull-policy=Never`
