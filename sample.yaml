@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: sample-cluster
+  name: sample-cluster
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: sample-cluster
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: sample-cluster
+    spec:
+      containers:
+      - image: sample-docker-image:v1
+        name: sample-cluster
+        imagePullPolicy: Never
+        resources: {}
+status: {}
